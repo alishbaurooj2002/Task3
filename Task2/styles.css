@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-el {
+  font-size: 1.6rem;
+  padding: 15px;
+}
+
+.logo-icon,
+.logo-text {
+  color: #3399CC;
+  text-decoration: none;
+}
+
+.menu-links a {
+  position: relative;           /* REQUIRED */
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 8px 10px;
+  color: gray;
+  font-size: 1.2rem;
+}
+
+.link-photos:hover,
+.link-photos:focus {
+  color: #87CEEB;
+  border-bottom: 3px solid #4da6ff;
+}
+
+.link-videos:hover,
+.link-videos:focus {
+  color: #87CEEB;
+  border-bottom: 3px solid red;
+}
+
+.link-about:hover,
+.link-about:focus {
+  color: #87CEEB;
+  border-bottom: 3px solid #4dff88;
+}
+
+.link-contact:hover,
+.link-contact:focus {
+  color: #87CEEB;
+  border-bottom: 3px solid purple;
+}
+
+/* ================= HERO ================= */
+
+.tm {
+  position: relative;
+  width: 100%;
+  min-width: 1007px;
+  height: 200px;
+}
+
+.tm-hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.search-container input {
+  padding: 8px 12px;
+  width: 360px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-container button {
+  width: 100px;
+  font-size: 20px;
+  border: none;
+  background-color: #009999;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================= CONTENT ================= */
+
+.container-1 {
+  margin-top: 60px;
+  margin-bottom: 24px;
+  padding: 0 12px;
+}
+
+.row-1 {
+  display: flex;
+  color: #009999;
+}
+
+.col-1,
+.col-2 {
+  width: 50%;
+}
+
+.col-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.page-num {
+  background-color: #cccccc4f;
+  color: #009999;
+  border: 1px solid rgba(0, 0, 0, 0.164);
+  height: 28px;
+  width: 40px;
+  margin: 0 5px;
+  text-align: center;
+}
+/* ================= GALLERY : ROW 2 ================= */
+
+.row-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 images per row */
+  gap: 16px;                             
+  padding: 0 12px;
+  margin-bottom: 90px;
+}
+
+/* column wrapper */
+.r2-col-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* remove default figure spacing */
+.row-2 figure {
+  margin: 0;
+}
+
+/* image container */
+.photo-1 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* image sizing */
+.photo-1 img {
+  width: 100%;
+  height: 230px;       /* increased image size */
+  object-fit: cover;  /* maintains proportion */
+  display: block;
+}
+
+/* overlay caption */
+.photo-1 figcaption {
+  position: absolute;
+  inset: 0;
+  background: rgba(211, 211, 211, 0.85);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* show overlay on hover */
+.photo-1:hover figcaption,
+.photo-1:focus-within figcaption {
+  opacity: 1;
+}
+
+/* full clickable overlay */
+.photo-1 figcaption a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* overlay title */
+.photo-1 figcaption h2 {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 28px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+/* text below image */
+.justify-content {
+  display: flex;
+  justify-content: space-between; /* left & right alignment */
+  margin-top: 6px;
+  font-size: 14px;
+  color: #777;
+  padding-bottom: 10px;
+}
+.row-3{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 12px;
+  margin-bottom: 90px;
+}
+.btn{
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 400px;
+  cursor: pointer;
+  padding: 15px 30px;
+  background-color: #009999;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+}
+.pg-link {
+  display: flex;
+}
+.pg{
+  margin-right: 20px;
+  background-color: #EEEEEE;
+  color: #999;
+
+}
+.btn.active{
+  background-color:#009999;
+  color: #fff;
+
+}
+.pg:hover{
+  background-color:#009999;
+  color: #fff;
+}
+.ft-1{
+  background-color: #EEEEEE;
+  color: #999;
+  padding: 20px 100px;
+
+}
+.ft-row-1 {
+    display: flex;
+    justify-content: space-between;                    
+    padding: 20px 100px;
+}
+.ft-row-2
+{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 100px;
+}
+.ft-col {
+    flex: 1;              /* each column grows equally */
+    min-width: 250px;      /* prevents shrinking too much on small screens */
+}
+
+/* Example styling for paragraph and links */
+.ft-col p, .ft-col a {
+    line-height: 1.6;
+    text-decoration: none;
+    color: #999;
+}
+
+.ft-col h3,.ft-col a:hover {
+    color: #00aaff;        /* link hover color */
+}
+.ft-col-2{
+  margin-left: 100px;
+}
+.no-bullets{
+  list-style: none;
+}
+.ft-col-2 ul {
+    padding-left: 0px;   /* removes browser default indent */
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.ft-col-2 h3 {
+    margin-left: 0;
+}
+.ft-col-3{
+  text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 48px;  
+   text-align: center;         
+}
+
+.social-links ul {
+  margin: 0;
+}
+
+.social-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    color: #999999;
+    text-decoration: none;
+}
+
+.social-links li a:hover {
+    color: #cacbcc;
+    background-color: #00aaff;
+}
+
+/* Second row of footer */
+.ft-row-2 {
+    display: flex;
+    justify-content: space-between;  /* space between columns */
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+/* Columns in second row */
+.ft-r2-col1 {
+    flex: 2;
+    min-width: 250px;
+}
+.ft-r2-col2{
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Optional: spacing inside columns */
+.ft-col, .ft-r2-col1, .ft-r2-col2 {
+    padding: 0 12px;  /* inner spacing inside columns */
+}
+
+/* Videos */
+.tm-vedio {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* optional, makes video cover the area */
+}
